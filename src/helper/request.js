@@ -18,9 +18,9 @@ export default function request(url, type = 'GET', data = {}) {
         } else {
             options.data = data
         }
-        axios(options).then(res => {
+        axios(options).then(res => {//status： ok/fail  
             cosnole.log(res.data)
-            if (res.data.status == 'ok') {
+            if (res.data.status == 'ok') { //通过判断得到的响应属性状态 执行接下来的操作
                 resolve(res.data)
             } else {
                 Message.error(res.data.msg)
