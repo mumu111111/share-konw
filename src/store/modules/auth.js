@@ -1,4 +1,4 @@
-import auth from './../api/auth'  //使用操作用户的方法
+import auth from '../../api/auth'  //使用操作用户的方法
 
 const state = {
     user: null,

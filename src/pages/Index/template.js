@@ -1,4 +1,4 @@
-import blog from './../api/blog' //返回对象，可调用对象的任意方法
+import blog from '../../api/blog' //返回对象，可调用对象的任意方法
 
 export default {
     data() { //页面要用到的数据
