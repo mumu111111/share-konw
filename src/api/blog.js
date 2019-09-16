@@ -25,8 +25,8 @@ export default {
     deleteBlog({ page = 1, userId, atIndex } = { page: 1 }) {
         return request(url, 'GET', {})
     },
-    getIndexBlogs({ page = 1, userId, atIndex } = { page: 1 }) {
-        return request(url, 'GET', {})
+    getIndexBlogs({ page = 1 } = { page: 1 }) {
+        return this.getBlogs({ page, atIndex: true })
     },
     getBlogsByUserId({ page = 1, userId, atIndex } = { page: 1 }) {
         return request(url, 'GET', {})
