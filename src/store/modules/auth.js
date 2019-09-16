@@ -34,7 +34,13 @@ const actions = {
         if (!state.isLogin) return false
         commit('setUser', { user: res.data })
         return true
-    }
+    },
+    async register({ commit }, { username, password }) {
+        let res = await auth.register({ username, password })
+        commit('setUser', { user: res.data })
+        commit('setLogin', { isLogin: true })
+        return res.data
+    },
 
 
 
