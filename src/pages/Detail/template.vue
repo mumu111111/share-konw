@@ -1,7 +1,19 @@
 <template>
-  
+  <div class="detail">
+      <div class="title">
+          <img :src="user.avatar" :alt="user.username" :title="user.username">
+          <h3>{{title}}</h3>
+          <div class="auther">
+              <span class="user"><router-link :to="`/user/${user.id}`">{{user.username}}</router-link></span>
+              <span class="time">{{createdAt.substr(0, 10)}}发布于{{createdAt}}</span>
+          </div>
+      </div>
+      <div class="markdown" v-html="markdown">
+
+      </div>
+  </div>
 </template>
 
-<script></script>
+<script src="./template.js"></script>
 
-<style></style>
+<style lang="less"  src="./template.less"></style>

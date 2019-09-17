@@ -31,8 +31,8 @@ export default {
     getBlogsByUserId({ page = 1, userId, atIndex } = { page: 1 }) {
         return request(url, 'GET', {})
     },
-    getDetail() {
-        return request(url, 'PATCH', {})
+    getDetail({ blogId }) {
+        return request(URLLIST.GET_DETAIL.replace(':blogId', blogId)) //实参替换形参
     }
 
 
