@@ -15,7 +15,7 @@ const mutations = {
         state.user = payload.user
     },
     setLogin(state, payload) {
-        state.user = payload.isLogin
+        state.isLogin = payload.isLogin
     }
 }
 
@@ -24,7 +24,7 @@ const actions = {
         return auth.login({ username, password })
             .then(res => {
                 commit('setUser', { user: res.data })
-                commit('setLogin', { isLogin: true })
+                commit('setLogin', { isLogin: true })   //登录操作后 改变isLogin状态
             })
     },
     async checkLogin({ commit, state }) {

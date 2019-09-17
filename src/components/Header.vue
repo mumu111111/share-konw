@@ -14,17 +14,13 @@
     </template>
 
     <template v-if="isLogin">
-      图标
-      <h1><router-link>let's share</router-link></h1>
-      编辑icon
+      <h1><router-link to="/">let's share</router-link></h1>
       <i class= 'el-icon-edit edit' @click="toCreate"></i>
-      touxiang
-      下拉列表
       <div class="user">
         <img :src="user.avatar" :alt="user.username" :title="user.username" class="avatar">
         <ul>
-          <li><router-link>我的</router-link></li>
-          <li><a href="#" @click="onLogout"></a></li>
+          <li><router-link to="/my">我的</router-link></li>
+          <li><a href="#" @click="onLogout">退出</a></li>
         </ul>
       </div>
 
