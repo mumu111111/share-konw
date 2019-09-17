@@ -16,8 +16,8 @@ export default {
         return request(URLLIST.GET_LIST, 'GET', { page, userId, atIndex })
     },
 
-    createBlog({ page = 1, userId, atIndex } = { page: 1 }) {
-        return request(url, 'GET', {})
+    createBlog({ title = '', content = '', description = '', atIndex = false } = { title: '', content: '', description: '', atIndex: false }) {
+        return request(URLLIST.CREATE, 'POST', { title, content, description, atIndex })
     },
     updateBlog({ page = 1, userId, atIndex } = { page: 1 }) {
         return request(url, 'GET', {})
