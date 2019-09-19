@@ -19,11 +19,11 @@ export default {
     createBlog({ title = '', content = '', description = '', atIndex = false } = { title: '', content: '', description: '', atIndex: false }) {
         return request(URLLIST.CREATE, 'POST', { title, content, description, atIndex })
     },
-    updateBlog({ page = 1, userId, atIndex } = { page: 1 }) {
-        return request(url, 'GET', {})
+    updataBlog({ blogId }, { title, content, description, atIndex }) {
+        return request(URLLIST.UPDATE.replace(':blogId', blogId), 'PATCH', { title, content, description, atIndex })
     },
-    deleteBlog({ page = 1, userId, atIndex } = { page: 1 }) {
-        return request(url, 'GET', {})
+    deleteBlog({ blogId }) {
+        return request(URLLIST.DELETE.replace(':blogId', blogId), 'DELETE');
     },
     //获取blogs -- 首页中 显示的blogs
     getIndexBlogs({ page = 1 } = { page: 1 }) {
@@ -34,7 +34,7 @@ export default {
         return this.getBlogs({ page, atIndex, userId })
     },
     getDetail({ blogId }) {
-        return request(URLLIST.GET_DETAIL.replace(':blogId', blogId)) //实参替换形参
+        return request(URLLIST.GET_DETAIL.replace(':blogId', blogId));
     }
 
 
