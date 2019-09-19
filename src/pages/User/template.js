@@ -17,7 +17,7 @@ export default {
     created() {
         this.userId = this.$route.params.userId
         this.page = parseInt(this.$route.query.page) || 1  //万一当前page不是1 呢
-        blog.getBlogsByUserId({ userId: this.userId })
+        blog.getBlogsByUserId(this.userId, { page: this.page })
             .then(res => {
                 this.blogs = res.data
                 // this.user = res.data.user
