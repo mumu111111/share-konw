@@ -11,7 +11,7 @@ const URLLIST = {
 }//有些接口需要传参 ，指定具体的blog
 
 export default {
-
+    //获取数据--基本款 涵盖所有包括各种状态的blogs
     getBlogs({ page = 1, userId, atIndex } = { page: 1 }) {
         return request(URLLIST.GET_LIST, 'GET', { page, userId, atIndex })
     },
@@ -25,11 +25,13 @@ export default {
     deleteBlog({ page = 1, userId, atIndex } = { page: 1 }) {
         return request(url, 'GET', {})
     },
+    //获取blogs -- 首页中 显示的blogs
     getIndexBlogs({ page = 1 } = { page: 1 }) {
-        return this.getBlogs({ page, atIndex: true })
+        return this.getBlogs({ page, atIndex: true })  //为TRUE 为只获取显示在首页设置的
     },
+    //获取blogs -- 查找userid的
     getBlogsByUserId({ page = 1, userId, atIndex } = { page: 1 }) {
-        return request(url, 'GET', {})
+        return this.getBlogs({ page, atIndex, userId })
     },
     getDetail({ blogId }) {
         return request(URLLIST.GET_DETAIL.replace(':blogId', blogId)) //实参替换形参

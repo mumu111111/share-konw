@@ -1,26 +1,32 @@
 <template>
     <div class="user">
         <div class="auth">
-            <img src="" alt="">
-            <h3>用户</h3>
+            <img :src="user.avatar" :alt="user.username" :title="user.username">
+            <h3>{{user.username}}</h3>
         </div>
         <template v-for="blog in blogs">
-            <router-link :to="`/detail/${blog.id}`">
-                
-                年 月份 日
-                wblog
-                发布时间
-                 
+            <router-link class="indexBlog-wrapper" :to="`/detail/${blog.id}`">
+                <!-- 年 月份 日 -->
+                <div class="day">
+                    <span>{{blog.createdAt.substr(8,2)}}</span>
+                </div>
+                <div class="year-month">    
+                    <span class="month">{{month[parseInt(blog.createdAt.substr(5,2))]}}</span>
+                    <span class="year">{{blog.createdAt.substr(0,4)}}</span>
+                </div>
+                <h3>{{ blog.title }}<span>发布于{{ blog.createdAt.substr(0,10) }}发布 于{{ (blog.createdAt) }}</span></h3>
+                <p>{{ blog.description }}</p>
             </router-link>
         </template>
         <el-pagination
+         background
+         layout="prev, pager, next"
          :total="total"
-         :page="page"
-
+         class="pagination"
+         :current-page.sync="page"
+         @current-change="onchangePage"
         ></el-pagination>
     </div>
-
-
 
 </template>
 
