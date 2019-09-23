@@ -19,7 +19,7 @@ export default {
     createBlog({ title = '', content = '', description = '', atIndex = false } = { title: '', content: '', description: '', atIndex: false }) {
         return request(URLLIST.CREATE, 'POST', { title, content, description, atIndex })
     },
-    updataBlog({ blogId }, { title, content, description, atIndex }) {
+    updateBlog({ blogId }, { title, content, description, atIndex }) {
         return request(URLLIST.UPDATE.replace(':blogId', blogId), 'PATCH', { title, content, description, atIndex })
     },
     deleteBlog({ blogId }) {

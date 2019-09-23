@@ -1,5 +1,5 @@
 <template>
-  <header class="{login: isLogin , no-login: '!isLogin'}">
+  <header :class="{login: isLogin , 'no-login': !isLogin}">
     <template v-if="!isLogin">
       <h1>let's share</h1>
       <p>精品荟萃</p>

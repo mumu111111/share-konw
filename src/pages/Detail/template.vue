@@ -5,7 +5,7 @@
           <h3>{{title}}</h3>
           <div class="auther">
               <span class="user"><router-link :to="`/user/${user.id}`">{{user.username}}</router-link></span>
-              <span class="time">{{createdAt.substr(0, 10)}}发布于{{createdAt}}</span>
+              <span class="time">{{createdAt.substr(0, 10)}}发布于{{friendlyDate(createdAt)}}</span>
           </div>
       </div>
       <div class="markdown" v-html="markdown">

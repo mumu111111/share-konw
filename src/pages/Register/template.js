@@ -4,7 +4,7 @@ export default {
         return {
             username: '',
             password: '',
-            userError: false,  //管理提示信息显示与否
+            usernameError: false,  //管理提示信息显示与否
             passwordError: false,
             usernameMessage: '',
             passwordMessage: ''
