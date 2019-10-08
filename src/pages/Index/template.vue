@@ -7,7 +7,7 @@
                     <img :src="blog.user.avatar" :alt="blog.user.username" :title="blog.user.username">
                     <span>{{blog.user.username}}</span>
                 </div>
-                <h3>{{blog.title}} <span>发布于{{friendlyDate(blog.createdAt)}}</span></h3>
+                <h3>{{blog.title}} <span>{{friendlyDate(blog.createdAt)}}</span></h3>
                 <p>{{blog.description}}</p>
             </router-link>
         </template>

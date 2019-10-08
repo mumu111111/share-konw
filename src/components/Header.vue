@@ -5,10 +5,10 @@
       <p>精品荟萃</p>
       <div class="btns">
         <router-link to= "/login">
-          <el-button>立即登录</el-button>
+          <el-button>登录</el-button>
         </router-link>
         <router-link to="/register">
-          <el-button>注册账号</el-button>
+          <el-button>注册</el-button>
         </router-link>
       </div>
     </template>
@@ -19,8 +19,8 @@
       <div class="user">
         <img :src="user.avatar" :alt="user.username" :title="user.username" class="avatar">
         <ul>
-          <li><router-link to="/my">我的</router-link></li>
-          <li><a href="#" @click="onLogout">退出</a></li>
+          <li><router-link to="/my">个人主页</router-link></li>
+          <li><a href="#" @click="onLogout">注销</a></li>
         </ul>
       </div>
 
