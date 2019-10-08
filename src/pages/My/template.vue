@@ -17,8 +17,9 @@
                 <h3>{{ blog.title }}<span>发布于{{ blog.createdAt.substr(0,10) }}发布 于{{ friendlyDate(blog.createdAt) }}</span></h3>
                 <p>{{ blog.description }}</p>
                 <div class="actions">
+                    <!-- router-link 跳转 -->
                     <router-link :to="`/edit/${blog.id}`">编辑</router-link>
-                    <!-- a连接点击 阻止默认事件 -->
+                    <!-- a连接  点击 阻止默认事件 -->
                     <a href="#" @click.prevent="onDelete(blog.id)">删除</a>
                 </div>
             </router-link>
