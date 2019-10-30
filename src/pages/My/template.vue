@@ -1,9 +1,10 @@
 <template>
     <div class="my">
         <div class="auth">
-            <!-- <img :src="user.avatar" :alt="user.username" :title="user.username"> -->
+            <img :src="user.avatar" :alt="user.username" :title="user.username">
             <h3>{{user.username}}</h3>
         </div>
+        <hr>
         <template v-for="blog in blogs">
             <router-link class="indexBlog-wrapper" :to="`/detail/${blog.id}`">
                 <!-- 年 月份 日 -->
@@ -11,7 +12,7 @@
                     <span class="day">{{blog.createdAt.substr(8,2)}}</span>
                 </div>
                 <div class="year-month">    
-                    <span class="month">{{month[parseInt(blog.createdAt.substr(5,2))]}}</span>
+                    <span class="month">{{month[parseInt(blog.createdAt.substr(5,2))]}}月</span>
                     <span class="year">{{blog.createdAt.substr(0,4)}}</span>
                 </div>
                 <h3>{{ blog.title }}<span>{{ friendlyDate(blog.createdAt) }}</span></h3>
@@ -39,4 +40,7 @@
 <script src="./template.js"></script>
 
 <style lang="less" scoped  src="./template.less"></style>
+
+
+
 

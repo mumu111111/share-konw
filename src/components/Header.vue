@@ -19,7 +19,7 @@
       <div class="user">
         <img :src="user.avatar" :alt="user.username" :title="user.username" class="avatar">
         <ul>
-          <li><router-link to="/my">个人主页</router-link></li>
+          <li><router-link to="/my">我的</router-link></li>
           <li><a href="#" @click="onLogout">注销</a></li>
         </ul>
       </div>
