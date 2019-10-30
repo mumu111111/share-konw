@@ -26,7 +26,7 @@ export default {
 #app {
   height: 100vh;
   display: grid;
-  grid-template-columns: 12% auto 12%;
+  grid-template-columns: 4% auto 4%;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "header header header" ". main ." "footer footer footer";
   #header {

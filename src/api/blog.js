@@ -30,10 +30,10 @@ export default {
     getIndexBlogs({ page = 1 } = { page: 1 }) {
         return this.getBlogs({ page, atIndex: true })  //为TRUE 为只获取显示在首页设置的
     },
-    //获取blogs -- 查找userid的
+    //获取blogs -- 查找userid的  传入参数顺序不能乱写
     // getBlogsByUserId({ page = 1, userId, atIndex } = { page: 1 }) {
     //     return this.getBlogs({ page, atIndex, userId })
-    // },
+    // },传入参数顺序不能乱
     getBlogsByUserId(userId, { page = 1, atIndex } = { page: 1 }) {
         return this.getBlogs({ userId, page, atIndex })
     },

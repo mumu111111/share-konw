@@ -79,7 +79,7 @@ header.no-login {
   justify-items: center;
   color: #fff;
   h1 {
-    font-size: 40px;
+    font-size: 32px;
     margin: 60px 0 0;
     text-transform: uppercase;
   }
