@@ -48,7 +48,10 @@ export default {
       this.$router.push({ path: "/create" });
     },
     onLogout() {
-      this.logout().then(() => {
+      console.log("注销data");
+
+      this.logout().then(data => {
+        console.log("注销data" + data);
         this.$router.push({ path: "/" });
       });
     }

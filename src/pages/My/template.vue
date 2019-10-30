@@ -1,7 +1,7 @@
 <template>
     <div class="my">
         <div class="auth">
-            <img :src="user.avatar" :alt="user.username" :title="user.username">
+            <!-- <img :src="user.avatar" :alt="user.username" :title="user.username"> -->
             <h3>{{user.username}}</h3>
         </div>
         <template v-for="blog in blogs">
@@ -14,7 +14,7 @@
                     <span class="month">{{month[parseInt(blog.createdAt.substr(5,2))]}}</span>
                     <span class="year">{{blog.createdAt.substr(0,4)}}</span>
                 </div>
-                <h3>{{ blog.title }}<span>发布于{{ friendlyDate(blog.createdAt) }}</span></h3>
+                <h3>{{ blog.title }}<span>{{ friendlyDate(blog.createdAt) }}</span></h3>
                 <p>{{ blog.description }}</p>
                 <div class="actions">
                     <!-- router-link 跳转 -->

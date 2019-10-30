@@ -8,8 +8,11 @@ const URLLIST = {
 
 export default {
     //注册
+    // register({ username, password }) {
+    //     return request(URLLIST.REGISTER, 'POST', { username, password })
+    // },
     register({ username, password }) {
-        return request(URLLIST.REGISTER, 'POST', { username, password })
+        return request(URLLIST.REGISTER, 'POST', { username, password });
     },
     //登录
     login({ username, password }) {
@@ -17,7 +20,7 @@ export default {
     },
     //登出
     logout() {
-        return request(URLLIST.LOGINOUT)
+        return request(URLLIST.LOGOUT)
     },
     loginfo() {
         return request(URLLIST.LOGINFO)
