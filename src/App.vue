@@ -31,8 +31,8 @@ export default {
   grid-template-areas: "header header header" ". main ." "footer footer footer";
   #header {
     grid-area: header;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 14%;
+    padding-right: 14%;
   }
   #main {
     grid-area: main;
